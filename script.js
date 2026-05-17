@@ -11,7 +11,6 @@ const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
 const emailLinks = document.querySelectorAll("[data-email-link]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formWhatsappButton = document.querySelector("[data-form-whatsapp]");
-const problemCards = document.querySelectorAll("[data-problem-card]");
 const backToTopButton = document.querySelector("[data-back-to-top]");
 
 if (yearElement) {
@@ -56,15 +55,23 @@ window.addEventListener("scroll", () => {
   }
 }, { passive: true });
 
-problemCards.forEach((card) => {
-  const button = card.querySelector(".problem-card-button");
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".problem-card-button");
 
   if (!button) return;
 
-  button.addEventListener("click", () => {
-    const isOpen = card.classList.toggle("is-open");
-    button.setAttribute("aria-expanded", String(isOpen));
-  });
+  const card = button.closest("[data-problem-card]");
+
+  if (!card) return;
+
+  const isOpen = card.classList.toggle("is-open");
+  const plus = button.querySelector(".problem-plus");
+
+  button.setAttribute("aria-expanded", String(isOpen));
+
+  if (plus) {
+    plus.textContent = isOpen ? "−" : "+";
+  }
 });
 
 if (backToTopButton) {
