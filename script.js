@@ -1,5 +1,5 @@
 // CAMBIAR DATOS PRINCIPALES: sustituye estos valores por los datos reales del proyecto.
-const PROJECT_NAME = "Gestión Online VUT Galicia";
+const PROJECT_NAME = "Luis Ligero | Gestión Turística Online";
 const WHATSAPP_PHONE = "34620089622";
 const CONTACT_EMAIL = "luisligero1@gmail.com";
 
@@ -11,6 +11,8 @@ const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
 const emailLinks = document.querySelectorAll("[data-email-link]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formWhatsappButton = document.querySelector("[data-form-whatsapp]");
+const problemCards = document.querySelectorAll("[data-problem-card]");
+const backToTopButton = document.querySelector("[data-back-to-top]");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -45,9 +47,31 @@ if (navToggle && nav) {
 }
 
 window.addEventListener("scroll", () => {
-  if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 20);
+  if (header) {
+    header.classList.toggle("is-scrolled", window.scrollY > 20);
+  }
+
+  if (backToTopButton) {
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 700);
+  }
 }, { passive: true });
+
+problemCards.forEach((card) => {
+  const button = card.querySelector(".problem-card-button");
+
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    const isOpen = card.classList.toggle("is-open");
+    button.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
+if (backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 const revealElements = document.querySelectorAll(".reveal");
 
