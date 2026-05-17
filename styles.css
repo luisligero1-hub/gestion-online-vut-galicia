@@ -640,24 +640,6 @@ h3 {
   cursor: pointer;
 }
 
-.problem-card-button::after {
-  display: none;
-  justify-self: end;
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(255, 253, 252, 0.16);
-  border-radius: 999px;
-  color: var(--secondary);
-  content: "+";
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-}
-
-.mini-card.is-open .problem-card-button::after {
-  content: "−";
-}
-
 .mini-card strong {
   display: block;
   line-height: 1.25;
@@ -1700,7 +1682,7 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
-  border: 1px solid rgba(200, 161, 90, 0.28);
+  border: 1px solid transparent;
   place-items: center;
   border-radius: 8px;
   background: rgba(200, 161, 90, 0.14);
@@ -1709,6 +1691,39 @@ textarea {
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.tag-start {
+  background: #3f4650;
+  color: #fffdf8;
+}
+
+.tag-message {
+  background: #25d366;
+  color: #062b16;
+}
+
+.tag-price {
+  background: #c8a15a;
+  color: #17120a;
+}
+
+.tag-web {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: #ffffff;
+  color: #11161d;
+}
+
+.tag-mobile {
+  background: #2563eb;
+  color: #eff6ff;
+}
+
+.tag-order {
+  border-color: rgba(200, 161, 90, 0.42);
+  background: #111827;
+  color: #d7b66f;
 }
 
 .problem-plus {
@@ -1724,7 +1739,8 @@ textarea {
 }
 
 .problem-item.is-open .problem-plus {
-  content: "−";
+  border-color: rgba(200, 161, 90, 0.58);
+  background: rgba(200, 161, 90, 0.12);
 }
 
 .problem-item small {
