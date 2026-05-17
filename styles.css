@@ -1198,6 +1198,32 @@ textarea {
 
   .hero {
     min-height: auto;
+    padding-top: 28px;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-property-image {
+    height: 300px;
+  }
+
+  .advisor-card,
+  .dashboard-main,
+  .dashboard-row,
+  .dashboard-note {
+    display: none;
+  }
+
+  .channel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .channel-card {
+    min-height: 54px;
+    padding: 12px;
+    font-size: 13px;
   }
 
   .hero-content,
@@ -1236,9 +1262,7 @@ textarea {
   }
 
   .floating-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 }
 
@@ -1302,9 +1326,12 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .floating-whatsapp {
-    right: 14px;
-    left: 14px;
+  h1 {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
   }
 }
 
