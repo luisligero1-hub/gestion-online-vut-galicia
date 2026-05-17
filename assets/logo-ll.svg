@@ -1,0 +1,9 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo LL</title>
+  <desc id="desc">Logotipo profesional con las iniciales LL de Luis Ligero.</desc>
+  <rect width="220" height="220" rx="34" fill="#11161D"/>
+  <rect x="12" y="12" width="196" height="196" rx="26" stroke="#C8A15A" stroke-width="3"/>
+  <path d="M64 54V154H111V135.7H84.7V54H64Z" fill="#F5EFE5"/>
+  <path d="M112 54V154H159V135.7H132.7V54H112Z" fill="#C8A15A"/>
+  <path d="M58 170H162" stroke="#C8A15A" stroke-width="4" stroke-linecap="round"/>
+</svg>
