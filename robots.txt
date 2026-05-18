@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luisligero1-hub.github.io/gestion-online-vut-galicia/sitemap.xml
+Sitemap: https://gestionvutgalicia.es/sitemap.xml
