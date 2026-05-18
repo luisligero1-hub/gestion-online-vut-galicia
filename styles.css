@@ -297,6 +297,10 @@ h3 {
   margin-top: 30px;
 }
 
+.hero-mobile-actions {
+  display: none;
+}
+
 .trust-strip {
   display: flex;
   flex-wrap: wrap;
@@ -1518,14 +1522,53 @@ textarea {
     width: 100%;
     max-width: 100%;
     min-height: auto;
-    gap: 18px;
-    padding-top: 28px;
+    gap: 14px;
+    padding-top: 20px;
     overflow: hidden;
     justify-items: center;
   }
 
   .hero-heading {
     margin-bottom: 0;
+  }
+
+  .hero-heading .eyebrow {
+    max-width: 320px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .hero-heading h1 {
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.02;
+  }
+
+  .hero-mobile-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 9px;
+    width: 100%;
+    margin: 0 auto 4px;
+  }
+
+  .hero-mobile-actions .btn {
+    min-height: 46px;
+    padding: 12px 11px;
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  .hero-mobile-actions .btn-primary {
+    border-color: rgba(200, 161, 90, 0.72);
+    background: linear-gradient(135deg, #d6b66e, #b88f43);
+    color: #11161D;
+    box-shadow: 0 14px 34px rgba(200, 161, 90, 0.18);
+  }
+
+  .hero-mobile-actions .btn-secondary {
+    background: rgba(255, 253, 252, 0.08);
   }
 
   .hero-heading,
@@ -1548,8 +1591,8 @@ textarea {
   }
 
   .hero-property-image {
-    height: min(68vw, 330px);
-    min-height: 250px;
+    height: min(56vw, 270px);
+    min-height: 210px;
     max-width: 100%;
     border-radius: 0;
     box-shadow: none;
@@ -1573,10 +1616,17 @@ textarea {
     border-radius: 0;
     background: rgba(9, 11, 14, 0.92);
     backdrop-filter: none;
+    padding: 14px 16px;
+  }
+
+  .hero-image-caption span {
+    margin-bottom: 5px;
+    font-size: 11px;
   }
 
   .hero-image-caption strong {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.22;
   }
 
   .hero-heading,
@@ -1599,6 +1649,10 @@ textarea {
   .hero-actions,
   .contact-actions {
     flex-direction: column;
+  }
+
+  .hero-details .hero-actions {
+    display: none;
   }
 
   .trust-strip {
@@ -1906,7 +1960,10 @@ textarea {
   }
 
   .hero-subtitle {
+    max-width: 340px;
+    margin-top: 4px;
     font-size: 16px;
+    line-height: 1.36;
   }
 
   .hero .eyebrow {
@@ -1918,7 +1975,8 @@ textarea {
 
   .hero-copy {
     display: block;
-    font-size: 15px;
+    margin-top: 12px;
+    font-size: 14px;
     line-height: 1.55;
   }
 
