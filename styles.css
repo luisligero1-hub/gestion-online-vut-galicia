@@ -1841,6 +1841,44 @@ textarea {
 }
 
 @media (max-width: 620px) {
+  .promise-grid {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .promise-item {
+    padding: 14px;
+  }
+
+  .promise-item h2 {
+    margin: 4px 0 6px;
+    font-size: 23px;
+  }
+
+  .promise-item p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .why-card {
+    padding: 15px 16px;
+  }
+
+  .why-card h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .site-footer {
     gap: 18px;
     padding-top: 34px;
