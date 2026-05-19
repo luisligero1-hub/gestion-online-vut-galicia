@@ -163,6 +163,12 @@ svg {
   border-color: rgba(255, 253, 252, 0.22);
 }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--secondary);
+  border-color: rgba(200, 161, 90, 0.38);
+}
+
 .header-cta:hover,
 .btn:hover {
   transform: translateY(-2px);
@@ -279,6 +285,7 @@ h3 {
 }
 
 .hero-copy,
+.hero-clarifier,
 .section-heading p,
 .pricing-panel p,
 .experience-card p,
@@ -299,6 +306,18 @@ h3 {
 
 .hero-mobile-actions {
   display: none;
+}
+
+.hero-clarifier {
+  max-width: 660px;
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--secondary);
+  border-radius: 8px;
+  background: rgba(255, 253, 252, 0.06);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .hero-profile-card {
@@ -1293,6 +1312,39 @@ li::before {
   line-height: 1.35;
 }
 
+.review-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.review-strip span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid rgba(200, 161, 90, 0.24);
+  border-radius: 8px;
+  background: rgba(200, 161, 90, 0.1);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.review-strip strong {
+  color: var(--secondary);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
 .audience-grid {
   grid-template-columns: minmax(0, 1fr) 360px;
   align-items: start;
@@ -2046,6 +2098,19 @@ textarea {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
+.platform-wordmark {
+  display: grid;
+  width: 82px;
+  height: 22px;
+  place-items: center;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #18315f;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
 .problem-item .problem-detail {
   margin: 0;
   padding: 0 18px 18px 74px;
@@ -2178,6 +2243,15 @@ textarea {
     line-height: 1.55;
   }
 
+  .hero-clarifier {
+    max-width: 340px;
+    margin: 12px auto 0;
+    padding: 11px 12px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
   .hero-profile-card {
     grid-template-columns: 50px minmax(0, 1fr);
     padding: 11px;
@@ -2242,6 +2316,12 @@ textarea {
   .problem-platforms img {
     width: 72px;
     height: 20px;
+  }
+
+  .platform-wordmark {
+    width: 72px;
+    height: 20px;
+    font-size: 12px;
   }
 
   .problem-item .problem-detail {
