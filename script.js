@@ -105,11 +105,13 @@ function getContactMessage() {
   const formData = new FormData(contactForm);
   const nombre = formData.get("nombre") || "";
   const ubicacion = formData.get("ubicacion") || "";
+  const zona = formData.get("zona") || "";
   const tramites = formData.get("tramites") || "";
   const publicada = formData.get("publicada") || "";
+  const modalidad = formData.get("modalidad") || "";
   const necesidad = formData.get("necesidad") || "";
 
-  return `Hola,\n\nMe gustaría solicitar información sobre el servicio de gestión online y trámites VUT.\n\nNombre: ${nombre}\nUbicación de la vivienda: ${ubicacion}\nAyuda con trámites/alta VUT: ${tramites}\nPublicada en plataformas: ${publicada}\nQué necesito: ${necesidad}\n\nGracias.`;
+  return `Hola,\n\nMe gustaría solicitar información sobre el servicio de gestión online y trámites VUT.\n\nNombre: ${nombre}\nUbicación de la vivienda: ${ubicacion}\nZona: ${zona}\nAyuda con trámites/alta VUT: ${tramites}\nPublicada en plataformas: ${publicada}\nModalidad que me interesa: ${modalidad}\nQué necesito: ${necesidad}\n\nGracias.`;
 }
 
 if (formWhatsappButton) {

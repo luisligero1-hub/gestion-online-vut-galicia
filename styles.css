@@ -1265,6 +1265,43 @@ li::before {
   box-shadow: var(--shadow);
 }
 
+.owner-benefits-section {
+  padding-top: 0;
+}
+
+.owner-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.owner-benefit {
+  padding: 24px;
+  border: 1px solid rgba(255, 253, 252, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 252, 0.08), rgba(255, 253, 252, 0.045));
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
+}
+
+.owner-benefit span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.owner-benefit h3 {
+  color: var(--white);
+}
+
+.owner-benefit p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .process-list {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1735,6 +1772,7 @@ textarea {
   .promise-grid,
   .admin-grid,
   .admin-steps,
+  .owner-benefits-grid,
   .work-scope-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2314,6 +2352,7 @@ textarea {
   .feature-list,
   .work-scope-grid,
   .services-grid,
+  .owner-benefits-grid,
   .process-list,
   .promise-grid,
   .admin-grid,
