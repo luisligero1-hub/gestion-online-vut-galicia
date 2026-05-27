@@ -1,5 +1,5 @@
 // CAMBIAR DATOS PRINCIPALES: sustituye estos valores por los datos reales del proyecto.
-const PROJECT_NAME = "Luis Ligero | Gestión Turística Online";
+const PROJECT_NAME = "Luis Ligero | Gestión online para viviendas turísticas";
 const WHATSAPP_PHONE = "34620089622";
 const CONTACT_EMAIL = "luisligero1@gmail.com";
 
