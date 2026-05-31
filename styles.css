@@ -946,6 +946,65 @@ h3 {
   font-weight: 700;
 }
 
+.authority-section {
+  padding-top: 0;
+}
+
+.authority-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(300px, 0.72fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(26px, 5vw, 56px);
+  border: 1px solid rgba(200, 161, 90, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 252, 0.09), rgba(200, 161, 90, 0.08)),
+    rgba(17, 22, 29, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.authority-panel h2 {
+  margin: 0 0 14px;
+  max-width: 720px;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.02;
+}
+
+.authority-panel p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.authority-checks {
+  display: grid;
+  gap: 10px;
+}
+
+.authority-checks li {
+  margin: 0;
+  padding: 13px 14px 13px 42px;
+  border: 1px solid rgba(255, 253, 252, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 253, 252, 0.065);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.authority-checks li::before {
+  left: 17px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background: var(--secondary);
+  transform: translateY(-50%);
+}
+
 .admin-section {
   padding-top: 0;
 }
@@ -1200,6 +1259,154 @@ li::before {
   color: var(--white);
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 800;
+}
+
+.platforms-section {
+  padding-top: clamp(64px, 8vw, 104px);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 252, 0.025), rgba(255, 253, 252, 0)),
+    #0D1117;
+}
+
+.platforms-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.platforms-visual {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 253, 252, 0.12);
+  border-radius: 8px;
+  background: var(--primary-dark);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.platforms-visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 10, 13, 0.04) 24%, rgba(8, 10, 13, 0.88) 100%);
+  content: "";
+}
+
+.platforms-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+
+.platforms-visual figcaption {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1;
+}
+
+.platforms-visual span,
+.platform-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.platforms-visual strong {
+  display: block;
+  max-width: 410px;
+  color: var(--white);
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.08;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.platform-card,
+.reservation-note {
+  border: 1px solid rgba(255, 253, 252, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 252, 0.085), rgba(255, 253, 252, 0.045));
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
+}
+
+.platform-card {
+  padding: 22px;
+}
+
+.platform-logo-wrap {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.platform-logo-wrap img {
+  max-width: 128px;
+  max-height: 34px;
+  object-fit: contain;
+}
+
+.platform-word {
+  display: inline-flex;
+  min-width: 72px;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #FFFFFF;
+  color: #245ABC;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.platform-card h3 {
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.platform-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.reservation-note {
+  grid-column: 1 / -1;
+  padding: 22px;
+  border-color: rgba(200, 161, 90, 0.24);
+  background:
+    linear-gradient(135deg, rgba(200, 161, 90, 0.13), rgba(255, 253, 252, 0.055)),
+    rgba(255, 253, 252, 0.055);
+}
+
+.reservation-note strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--white);
+  font-size: 19px;
+}
+
+.reservation-note p,
+.reservation-note span {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .service-intro {
@@ -2037,6 +2244,40 @@ li::before {
   color: #87909F;
 }
 
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkbox-group > span {
+  grid-column: 1 / -1;
+  color: #172234;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.checkbox-group label {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid rgba(7, 17, 31, 0.1);
+  border-radius: 8px;
+  background: #F8F5EF;
+  color: #172234;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.checkbox-group input {
+  width: 16px;
+  height: 16px;
+  accent-color: #111C2B;
+  flex: 0 0 auto;
+}
+
 .form-actions {
   display: grid;
   grid-template-columns: 0.7fr 1fr 1fr;
@@ -2333,12 +2574,18 @@ textarea {
 
   .service-intro,
   .extras-layout,
+  .platforms-layout,
+  .authority-panel,
   .why-layout,
   .delegation-panel {
     grid-template-columns: 1fr;
   }
 
   .extras-visual {
+    min-height: 330px;
+  }
+
+  .platforms-visual {
     min-height: 330px;
   }
 
@@ -2414,6 +2661,7 @@ textarea {
   .experience-card,
   .audience-grid,
   .limits-grid,
+  .platforms-grid,
   .site-footer {
     grid-template-columns: 1fr;
   }
@@ -2601,6 +2849,36 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .authority-panel {
+    padding: 24px;
+  }
+
+  .authority-panel h2 {
+    font-size: 31px;
+    text-align: left;
+  }
+
+  .authority-panel p {
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .authority-checks {
+    gap: 8px;
+  }
+
+  .platforms-section .section-heading {
+    text-align: left;
+  }
+
+  .platforms-visual {
+    min-height: 280px;
+  }
+
+  .platform-card {
+    padding: 18px;
+  }
+
   .problem-summary {
     order: -1;
   }
@@ -2690,6 +2968,29 @@ textarea {
     gap: 7px 10px;
     margin: 8px 0;
     font-size: 12px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .form-progress {
+    gap: 7px;
+  }
+
+  .form-progress span {
+    min-height: 50px;
+    font-size: 13px;
+  }
+
+  .form-actions,
+  .step-actions {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .platform-logo-wrap img {
+    max-width: 118px;
   }
 }
 

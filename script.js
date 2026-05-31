@@ -113,9 +113,12 @@ function getContactMessage() {
   const publicada = formData.get("publicada") || "";
   const modalidad = formData.get("modalidad") || "";
   const necesidad = formData.get("necesidad") || "";
+  const email = formData.get("email") || "";
+  const telefono = formData.get("telefono") || "";
   const contacto = formData.get("contacto") || "";
+  const plataformas = formData.getAll("plataformas").join(", ") || "No indicado";
 
-  return `Hola,\n\nMe gustaría solicitar una valoración personalizada para una vivienda turística.\n\nNombre: ${nombre}\nForma preferida de contacto: ${contacto}\nUbicación de la vivienda: ${ubicacion}\nZona: ${zona}\nEstado actual / plataformas: ${publicada}\nAyuda con trámites/alta VUT: ${tramites}\nModalidad que me interesa: ${modalidad}\nQué necesito: ${necesidad}\n\nGracias.`;
+  return `Hola,\n\nMe gustaría solicitar una valoración personalizada para una vivienda turística.\n\nNombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nForma preferida de contacto: ${contacto}\nUbicación de la vivienda: ${ubicacion}\nZona: ${zona}\nEstado actual: ${publicada}\nPlataformas actuales: ${plataformas}\nAyuda con trámites/alta VUT: ${tramites}\nModalidad que me interesa: ${modalidad}\nQué necesito: ${necesidad}\n\nGracias.`;
 }
 
 function showFormStep(stepIndex) {
