@@ -12,6 +12,9 @@ const emailLinks = document.querySelectorAll("[data-email-link]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formWhatsappButton = document.querySelector("[data-form-whatsapp]");
 const backToTopButton = document.querySelector("[data-back-to-top]");
+const formSteps = contactForm ? Array.from(contactForm.querySelectorAll("[data-form-step]")) : [];
+const stepDots = contactForm ? Array.from(contactForm.querySelectorAll("[data-step-dot]")) : [];
+let currentFormStep = 0;
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
@@ -110,8 +113,41 @@ function getContactMessage() {
   const publicada = formData.get("publicada") || "";
   const modalidad = formData.get("modalidad") || "";
   const necesidad = formData.get("necesidad") || "";
+  const contacto = formData.get("contacto") || "";
 
-  return `Hola,\n\nMe gustaría solicitar información sobre el servicio de gestión online y trámites VUT.\n\nNombre: ${nombre}\nUbicación de la vivienda: ${ubicacion}\nZona: ${zona}\nAyuda con trámites/alta VUT: ${tramites}\nPublicada en plataformas: ${publicada}\nModalidad que me interesa: ${modalidad}\nQué necesito: ${necesidad}\n\nGracias.`;
+  return `Hola,\n\nMe gustaría solicitar una valoración personalizada para una vivienda turística.\n\nNombre: ${nombre}\nForma preferida de contacto: ${contacto}\nUbicación de la vivienda: ${ubicacion}\nZona: ${zona}\nEstado actual / plataformas: ${publicada}\nAyuda con trámites/alta VUT: ${tramites}\nModalidad que me interesa: ${modalidad}\nQué necesito: ${necesidad}\n\nGracias.`;
+}
+
+function showFormStep(stepIndex) {
+  if (!formSteps.length) return;
+
+  currentFormStep = Math.max(0, Math.min(stepIndex, formSteps.length - 1));
+
+  formSteps.forEach((step, index) => {
+    step.classList.toggle("is-active", index === currentFormStep);
+  });
+
+  stepDots.forEach((dot, index) => {
+    dot.classList.toggle("is-active", index === currentFormStep);
+    dot.classList.toggle("is-complete", index < currentFormStep);
+  });
+}
+
+if (contactForm && formSteps.length) {
+  contactForm.addEventListener("click", (event) => {
+    const nextButton = event.target.closest("[data-next-step]");
+    const prevButton = event.target.closest("[data-prev-step]");
+
+    if (nextButton) {
+      showFormStep(currentFormStep + 1);
+    }
+
+    if (prevButton) {
+      showFormStep(currentFormStep - 1);
+    }
+  });
+
+  showFormStep(0);
 }
 
 if (formWhatsappButton) {

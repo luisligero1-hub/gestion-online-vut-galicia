@@ -1802,43 +1802,187 @@ li::before {
   grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.7fr);
   align-items: start;
   border-top: 1px solid rgba(255, 253, 252, 0.08);
-}
-
-.contact-cta {
-  grid-column: 1 / -1;
-  max-width: 1180px;
-  margin: 0 auto 18px;
-  padding: clamp(26px, 5vw, 54px);
-  border: 1px solid rgba(200, 161, 90, 0.32);
-  border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(200, 161, 90, 0.18), rgba(56, 69, 83, 0.2)),
-    #10151C;
-  box-shadow: var(--shadow);
+    radial-gradient(circle at 20% 0%, rgba(200, 161, 90, 0.16), transparent 34%),
+    linear-gradient(180deg, #F7F3EA 0%, #EFE7D9 100%);
+  color: #0D1623;
 }
 
-.contact-cta h2 {
+.contact-hero {
+  grid-column: 1 / -1;
   max-width: 900px;
+  margin: 0 auto clamp(30px, 5vw, 58px);
+  text-align: center;
 }
 
-.contact-cta p {
-  max-width: 780px;
-  color: var(--muted);
+.contact-hero .eyebrow {
+  color: #9D7A3A;
+}
+
+.contact-hero h2 {
+  color: #07111F;
+}
+
+.contact-hero p {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #465266;
+  font-size: 17px;
+}
+
+.contact-direct-card {
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid rgba(7, 17, 31, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #07111F;
+  box-shadow: 0 24px 70px rgba(42, 31, 17, 0.12);
+}
+
+.contact-direct-card h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.contact-direct-card p {
+  color: #596477;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0 0 22px;
+  border-bottom: 1px solid rgba(7, 17, 31, 0.09);
+}
+
+.contact-methods a,
+.contact-methods div {
+  display: grid;
+  gap: 3px;
+  padding: 14px 14px 14px 54px;
+  border: 1px solid rgba(7, 17, 31, 0.08);
+  border-radius: 8px;
+  background: rgba(247, 243, 234, 0.78);
+  color: #07111F;
+}
+
+.contact-methods span {
+  color: #697486;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-methods strong {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.privacy-note {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .contact-form {
   display: grid;
   gap: 16px;
   padding: clamp(22px, 4vw, 34px);
-  border: 1px solid rgba(255, 253, 252, 0.1);
+  border: 1px solid rgba(7, 17, 31, 0.09);
   border-radius: 8px;
-  background: rgba(255, 253, 252, 0.08);
-  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.88);
+  color: #07111F;
+  box-shadow: 0 24px 70px rgba(42, 31, 17, 0.14);
+}
+
+.form-progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.form-progress span {
+  display: grid;
+  min-height: 58px;
+  place-items: center;
+  border: 1px solid rgba(7, 17, 31, 0.1);
+  border-radius: 8px;
+  background: #F7F3EA;
+  color: #6C7686;
+  font-weight: 900;
+}
+
+.form-progress span.is-active,
+.form-progress span.is-complete {
+  border-color: rgba(200, 161, 90, 0.45);
+  background: #111C2B;
+  color: #FFFFFF;
+}
+
+.form-progress small {
+  display: block;
+  color: inherit;
+  font-size: 11px;
+  line-height: 1.1;
+  opacity: 0.78;
+}
+
+.form-step {
+  display: none;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form-step.is-active {
+  display: grid;
+}
+
+.form-step legend {
+  margin-bottom: 4px;
+  color: #07111F;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.form-step p {
+  margin: 0 0 6px;
+  color: #596477;
+}
+
+.contact-form label {
+  color: #172234;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  border-color: rgba(7, 17, 31, 0.12);
+  background: #F8F5EF;
+  color: #07111F;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #87909F;
 }
 
 .form-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 0.7fr 1fr 1fr;
+  gap: 12px;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
   gap: 12px;
 }
 
