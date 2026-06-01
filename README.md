@@ -1,54 +1,60 @@
-# Gestión online de viviendas turísticas
+# Gestión viviendas turísticas Galicia
 
-Web estática profesional para presentar servicios de gestión online, comercial y administrativa para viviendas turísticas en Galicia, Rías Baixas y Pontevedra.
+Web de `gestionvutgalicia.es`, preparada para GitHub Pages y creada con Next.js exportado como sitio estático.
 
-Está preparada para GitHub Pages y para el dominio `gestionvutgalicia.es`.
+## Estructura de la carpeta
 
-## Archivos principales
+- Raíz del proyecto: web publicada. Estos archivos son los que sirve GitHub Pages.
+- `codigo-fuente/`: código editable de la web en Next.js.
+- `images/`: imágenes optimizadas que usa la web publicada.
+- `documentacion/`: checklists de QA, SEO y accesibilidad.
+- `CNAME`: dominio personalizado `gestionvutgalicia.es`.
+- `googlec9519ca6bb9f861e.html`: archivo de verificación de Google Search Console.
+- `sitemap.xml` y `robots.txt`: archivos para buscadores.
 
-- `index.html`: contenido, SEO, secciones, enlaces y datos estructurados.
-- `styles.css`: diseño responsive, colores, cabecera, tarjetas, formularios y móvil.
-- `script.js`: menú móvil, scroll, formulario, WhatsApp, correo y año automático.
-- `assets/`: logo, fotos, imágenes, iconos y recursos visuales.
-- `sitemap.xml`: sitemap para Google Search Console.
-- `robots.txt`: permiso de rastreo para buscadores.
-- `aviso-legal.html`, `privacidad.html`, `cookies.html`: páginas legales básicas editables.
-
-## Datos de contacto actuales
+## Datos actuales
 
 - WhatsApp: `+34 620 089 622`
 - Email: `luisligero1@gmail.com`
 - Dominio: `https://gestionvutgalicia.es/`
 
-Para cambiar el WhatsApp o el correo, revisa:
+Los datos principales se editan en:
 
-- `script.js`: constantes `WHATSAPP_PHONE` y `CONTACT_EMAIL`.
-- `index.html`: enlaces visibles de WhatsApp, mailto y datos estructurados.
-- Páginas legales si cambias titular o contacto.
+`codigo-fuente/src/config/brand.ts`
 
-## Qué vende la web
+## Formulario
 
-- Alta y puesta en marcha VUT.
-- Trámites y obligaciones online en Galicia.
-- Gestión de Booking, Airbnb, Vrbo y web propia.
-- Reservas directas y medios de pago transparentes.
-- Atención comercial previa y seguimiento hasta la llegada.
-- Gestión online continuada con informes al propietario.
-- Extras opcionales para huéspedes: guías, rutas y traslados para grupos.
+La web es estática y no guarda datos en base de datos. El formulario prepara la solicitud y permite enviarla por:
 
-## Cómo publicar cambios
+- WhatsApp, con el mensaje ya rellenado.
+- Correo, mediante `mailto:` con asunto y cuerpo preparados.
 
-1. Edita los archivos.
-2. Revisa localmente abriendo `index.html` o usando un servidor local.
-3. Sube los cambios al repositorio de GitHub.
-4. GitHub Pages actualizará la web.
-5. Si cambias textos importantes, abre Google Search Console y solicita indexación de `https://gestionvutgalicia.es/`.
+Para guardar leads automáticamente haría falta conectar un servicio externo, por ejemplo Formspree, Brevo, Resend, Google Sheets, Airtable, Notion o HubSpot.
 
-## Mejoras futuras recomendadas
+## Cómo editar y publicar cambios
 
-- Blog SEO con artículos sobre alta VUT Galicia, Turespazo, SES.Hospedajes y reservas directas.
-- Integración del formulario con Google Sheets, Notion, Airtable, HubSpot o Brevo.
-- Google Analytics, Plausible o Tag Manager.
-- Versión en gallego e inglés.
-- Páginas independientes para servicios concretos cuando haya más contenido.
-- Área privada para propietarios en una fase posterior.
+1. Entra en `codigo-fuente/`.
+2. Ejecuta `npm install` si no existe `node_modules`.
+3. Edita los componentes o textos.
+4. Ejecuta `npm run build`.
+5. Copia el contenido de `codigo-fuente/out/` a la raíz del proyecto.
+6. Haz commit y push a GitHub.
+7. GitHub Pages publicará la nueva versión.
+
+## Qué no borrar
+
+- `CNAME`
+- `.nojekyll`
+- `googlec9519ca6bb9f861e.html`
+- `_next/`
+- `index.html`
+- Las carpetas de cada página: `contacto/`, `servicios/`, `tramites-vut-galicia/`, etc.
+- `images/`
+
+## Documentación
+
+Consulta:
+
+- `documentacion/QA_CHECKLIST.md`
+- `documentacion/SEO_CHECKLIST.md`
+- `documentacion/ACCESSIBILITY_CHECKLIST.md`
