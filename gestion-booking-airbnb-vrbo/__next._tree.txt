@@ -1,2 +1,2 @@
-:HL["/_next/static/chunks/0bay39kth0l-0.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"gestion-booking-airbnb-vrbo","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"iLUOI6UFAB62DL9_gPTZ9"}
+:HL["/_next/static/chunks/0qlea.bu94c28.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"gestion-booking-airbnb-vrbo","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"e_2RcEFXT3vq8FQYf7PKd"}
