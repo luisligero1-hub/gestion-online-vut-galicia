@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://gestionvutgalicia.es/</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://gestionvutgalicia.es</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/servicios</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/tramites-vut-galicia</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/gestion-booking-airbnb-vrbo</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/reservas-directas</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/extras</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/contacto</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/aviso-legal</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://gestionvutgalicia.es/privacidad</loc>
+<lastmod>2026-06-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
